@@ -8,11 +8,11 @@ import numpy as np
 from PIL import Image,ImageOps 
 
 def app():
-  new_model = keras.models.load_model("haemorrhage_modelnorm.h5")
-  st.title("Haemorrhage Detection")
+	new_model = keras.models.load_model("haemorrhage_modelnorm.h5")
+	st.title("Haemorrhage Detection")
 	
-  uploaded_file_hem = st.file_uploader("Choose a image file", type=['png','jpg','jpeg'])
-  if uploaded_file_hem is not None:
+	uploaded_file_hem = st.file_uploader("Choose a image file", type=['png','jpg','jpeg'])
+	if uploaded_file_hem is not None:
 		image = Image.open(uploaded_file_hem)
 		size =(128,128)
 		image1=image.resize(size)
@@ -29,4 +29,24 @@ def app():
 			st.write('***Normal***')
 			with st.beta_expander('Show Image'):
 				st.image(image,channels='BGR',width=300)
+			
+		
+				
+			
+		
+		
+	
+	
+
+
+	
+  
+  
+		
+		
+			
+				
+		
+			
+				
 	
