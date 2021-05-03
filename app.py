@@ -16,7 +16,7 @@ def app():
 		image = Image.open(uploaded_file_hem)
 		size =(128,128)
 		image1=image.resize(size)
-		image1=ImageOps.grayscle(image1)
+		image1=ImageOps.grayscale(image1)
 		x=np.asarray(image1)
 		x=np.expand_dims(x,axis=0)
 		x=np.reshape(x,(1,128,128,1))
