@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import cv2
 import numpy as np
@@ -29,6 +30,13 @@ def app():
 			st.write('***Normal***')
 			with st.beta_expander('Show Image'):
 				st.image(image,channels='BGR',width=300)
+				
+if __name__ == '__main__':
+	port = int(os.environ.get("PORT", 5000))
+	app.run(host='0.0.0.0', port=port)
+	
+    
+    
 			
 		
 				
