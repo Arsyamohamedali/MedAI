@@ -31,7 +31,7 @@ def app():
 		x=np.reshape(x,(1,128,128,1))
 		x=x/255.0
 		if(new_model.predict_classes(x)[0][0]==1):
-			st.write('***Result: Haemorrhage***')
+			st.write('***Result: Hemorrhage***')
 			with st.beta_expander('Show Image'):
 				st.image(image,channels='BGR',width=200)
 		else:
